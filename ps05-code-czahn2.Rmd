@@ -1,0 +1,30 @@
+---
+title: "ps05-clode-czahn2"
+author: "camille zahn"
+date: "2023-02-15"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library("readr")
+```
+
+```{r}
+getwd()
+```
+
+```{r, message=FALSE}
+library(tidyverse)
+gapminder <- read_delim("gapminder.csv.bz2")
+```
+The _gapminder_ data contains `r nrow(gapminder)` rows and `r ncol(gapminder)` columns.
+
+```{r}
+gapminder %>%
+  sample_n(10) %>%
+  knitr::kable()
+```
