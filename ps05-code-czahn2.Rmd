@@ -11,6 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 library("readr")
+library("ggplot2")
 ```
 
 ```{r}
@@ -58,13 +59,28 @@ even more iso3 -codes. What is going on? Can you find it out?
 (a) (5pt) Find how many names are there for each iso-2 code. Are there any iso-2 codes that
 correspond to more than one name? What are these countries?
 ```{r}
-##gapminder %>% ##????????????????????
+gapminder %>%
+  group_by(iso2) %>%
+  summarize(name_count = n_distinct(name)) %>%
+  arrange(desc(name_count))
+
+gapminder %>%
+  filter(is.na(iso2)) %>%
+  distinct(name)
+
 ```
 (b) (5pt) Now repeat the same for name and iso3-code. Are there country names that have
 more than one iso3-code? What are these countries?
 Hint: two of these entitites are CHANISL and NLD CURACAO.
 ```{r}
-##gapminder %>% ##????????????????????
+gapminder %>%
+  group_by(name) %>%
+  summarize(name_count = n_distinct(iso3)) %>%
+  arrange(desc(name_count))
+
+gapminder %>%
+  filter(is.na(name)) %>%
+  distinct(iso3)
 ```
 
 3. (2pt) What is the minimum and maximum year in these data?
@@ -96,21 +112,63 @@ gapminder %>%
 2. (5pt) Make a plot of total CO2 emissions over time for the U.S, China, and India. Add a few
 more countries of your choice. Explain what do you see.
 
+```{r}
+gapminder %>%
+  filter(iso3 %in% c("USA", "CHN", "IND", "RUS", "JPN")) %>%
+  ggplot(aes(x = time, y = co2, color = name)) +
+  geom_line() +
+  labs(x = "Year", y = "CO2 Emissions (metric tons per capita)", color = "Country")
+## all countries except Russia have increased emissions over time, and China has the most
+```
+
 3. (5pt) Now let’s analyze the CO2 emissions per capita (co2_PC ). Make a similar plot of the
 same countries. What does this figure suggest?
-
+```{r}
+gapminder %>%
+  filter(iso3 %in% c("USA", "CHN", "IND", "RUS", "JPN")) %>%
+  ggplot(aes(x = time, y = co2_PC, color = name)) +
+  geom_line() +
+  labs(x = "Year", y = "CO2 Emissions (metric tons per capita)", color = "Country")
+## Since China has such a large population, their per capita emissions is lower than that of 
+## Japan, Russia, and the United States.
+```
 4. (6pt) Compute average CO2 emissions per capita across the continents (assume region is the
 same as continent). Comment what do you see.
 Note: just compute averages over countries and ignore the fact that countries are of different
 size.
 Hint: Americas 2016 should be 4.80.
+```{r}
+gapminder %>%
+  group_by(region, time) %>%
+  filter(!is.na(co2_PC), !is.na(name)) %>%
+  filter(time == 1960 | time == 2016) %>%
+  summarize(mean = mean(co2_PC))
 
+```
 5. (7pt) Make a barplot where you show the previous results–average CO2 emissions per capita
 across continents in 1960 and 2016.
+```{r}
+avg_1960_2016 <- gapminder %>%
+  group_by(region, time) %>%
+  filter(!is.na(co2_PC), !is.na(name)) %>%
+  summarize(mean = mean(co2_PC)) %>%
+  filter(time == 1960 | time == 2016)
+  ggplot(data = avg_1960_2016,
+           aes(x = region, y = mean, fill = as.factor(time))) +
+    geom_bar(stat = "identity", position = "dodge")
+
+```
 
 6. Which countries are the three largest, and three smallest CO2 emitters (in terms of CO2 per
-capita) in 2019 for each continent? (Assume region is continent).
-
+capita) in 2016 for each continent? (Assume region is continent).
+```{r}
+gapminder %>%
+  select(time, region, co2_PC, name) %>%
+  filter(time == 2016) %>%
+  group_by(region, time) %>%
+  summarize(top3 = paste(head(name[order(co2_PC, decreasing = TRUE)], 3), collapse = ", "),
+            bottom3 = paste(head(name[order(co2_PC)], 3), collapse = ", "))
+```
 ***4 GDP per capita (50pt)***
 
 1. (8pt) Make a scatterplot of GDP per capita versus life expectancy by country, using data for
