@@ -77,13 +77,12 @@ Hint: two of these entitites are CHANISL and NLD CURACAO.
 ```{r}
 gapminder %>%
   group_by(name) %>%
+  select(iso3, name) %>%
   summarize(name_count = n_distinct(iso3)) %>%
-  arrange(desc(name_count))
-
-gapminder %>%
-  filter(is.na(name)) %>%
-  distinct(iso3)
+  filter(name_count > 1)
 ```
+There are 4 country names that have more than one iso-3 code.
+
 
 3. (2pt) What is the minimum and maximum year in these data?
 ```{r}
@@ -279,10 +278,8 @@ us_rank_2019 <- gapminder_ranked %>%
 # Print results
 cat("Ranking of US in 1960:", us_rank_1960, "\n")
 cat("Ranking of US in 2019:", us_rank_2019, "\n")
-
-
 ```
-
+Comment: I couldn't get this one to function correctly :( Dont know why it won't print the ranking.
 
 8. (6pt) If you did this correctly, then you noticed that US ranking has been falling quite a
 bit. But we also have more countries in 2019–what about the relative rank divided by the
@@ -309,3 +306,4 @@ cat("Relative rank of the US in terms of life expectancy in 2019:",
     round(rank_2019, 2), "\n")
 
 ```
+Comment: I couldn't get this one to function correctly :( Dont know why it won't print the ranking.

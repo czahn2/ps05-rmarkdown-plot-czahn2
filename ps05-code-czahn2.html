@@ -374,13 +374,13 @@ gapminder &lt;- read_delim(&quot;gapminder.csv.bz2&quot;)</code></pre>
 <pre class="r"><code>gapminder %&gt;%
   sample_n(10) %&gt;%
   knitr::kable()</code></pre>
-<table>
+<table style="width:100%;">
 <colgroup>
 <col width="1%" />
-<col width="3%" />
+<col width="5%" />
 <col width="1%" />
 <col width="2%" />
-<col width="9%" />
+<col width="8%" />
 <col width="5%" />
 <col width="1%" />
 <col width="4%" />
@@ -388,15 +388,15 @@ gapminder &lt;- read_delim(&quot;gapminder.csv.bz2&quot;)</code></pre>
 <col width="4%" />
 <col width="4%" />
 <col width="5%" />
-<col width="5%" />
+<col width="4%" />
 <col width="3%" />
-<col width="3%" />
-<col width="5%" />
+<col width="2%" />
+<col width="4%" />
 <col width="4%" />
 <col width="5%" />
 <col width="4%" />
 <col width="3%" />
-<col width="3%" />
+<col width="2%" />
 <col width="4%" />
 <col width="2%" />
 <col width="2%" />
@@ -433,178 +433,68 @@ gapminder &lt;- read_delim(&quot;gapminder.csv.bz2&quot;)</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">DNK</td>
-<td align="left">Denmark</td>
-<td align="left">DK</td>
-<td align="left">Europe</td>
-<td align="left">Northern Europe</td>
-<td align="left">NA</td>
-<td align="right">1978</td>
-<td align="right">5104248</td>
-<td align="right">1.670</td>
-<td align="right">74.39293</td>
-<td align="right">10.6</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-<td align="right">35322.5808</td>
-<td align="right">NA</td>
-<td align="right">29210.00</td>
-<td align="right">189913</td>
-<td align="right">7491995</td>
-<td align="right">260.34658</td>
-<td align="right">61117.889</td>
-<td align="right">81491.50</td>
-<td align="right">11.97393</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-</tr>
-<tr class="even">
-<td align="left">FIN</td>
-<td align="left">Finland</td>
-<td align="left">FI</td>
-<td align="left">Europe</td>
-<td align="left">Northern Europe</td>
-<td align="left">NA</td>
-<td align="right">1966</td>
-<td align="right">4580869</td>
-<td align="right">2.410</td>
-<td align="right">69.47707</td>
-<td align="right">19.3</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-<td align="right">15299.3489</td>
-<td align="right">NA</td>
-<td align="right">28594.00</td>
-<td align="right">131450</td>
-<td align="right">2015406</td>
-<td align="right">126.88849</td>
-<td align="right">29519.350</td>
-<td align="right">NA</td>
-<td align="right">6.44405</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">PRT</td>
-<td align="left">Portugal</td>
-<td align="left">PT</td>
-<td align="left">Europe</td>
-<td align="left">Southern Europe</td>
-<td align="left">NA</td>
-<td align="right">2014</td>
-<td align="right">10401062</td>
-<td align="right">1.230</td>
-<td align="right">81.12195</td>
-<td align="right">3.6</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-<td align="right">21540.9880</td>
-<td align="right">100.00000</td>
-<td align="right">36638.80</td>
-<td align="right">NA</td>
-<td align="right">1333258</td>
-<td align="right">191.03952</td>
-<td align="right">44656.726</td>
-<td align="right">NA</td>
-<td align="right">4.29348</td>
-<td align="right">0</td>
-<td align="right">NA</td>
-</tr>
-<tr class="even">
-<td align="left">GUY</td>
-<td align="left">Guyana</td>
-<td align="left">GY</td>
-<td align="left">Americas</td>
-<td align="left">Latin America and the Caribbean</td>
-<td align="left">South America</td>
-<td align="right">2006</td>
-<td align="right">746343</td>
-<td align="right">2.797</td>
-<td align="right">66.97200</td>
-<td align="right">40.4</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-<td align="right">3908.3133</td>
-<td align="right">73.38259</td>
-<td align="right">11474.26</td>
-<td align="right">NA</td>
-<td align="right">475363</td>
-<td align="right">32.58095</td>
-<td align="right">1290.784</td>
-<td align="right">4648.22</td>
-<td align="right">1.72948</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">GHA</td>
-<td align="left">Ghana</td>
-<td align="left">GH</td>
-<td align="left">Africa</td>
-<td align="left">Sub-Saharan Africa</td>
-<td align="left">Western Africa</td>
-<td align="right">1969</td>
-<td align="right">8520015</td>
-<td align="right">6.957</td>
-<td align="right">49.05700</td>
-<td align="right">202.9</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-<td align="right">1006.5132</td>
-<td align="right">NA</td>
-<td align="right">117000.00</td>
-<td align="right">2092</td>
-<td align="right">535463</td>
-<td align="right">0.69882</td>
-<td align="right">1690.487</td>
-<td align="right">NA</td>
-<td align="right">0.19841</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-</tr>
-<tr class="even">
-<td align="left">SDN</td>
-<td align="left">Sudan</td>
-<td align="left">SD</td>
+<td align="left">ESH</td>
+<td align="left">Western Sahara</td>
+<td align="left">EH</td>
 <td align="left">Africa</td>
 <td align="left">Northern Africa</td>
 <td align="left">NA</td>
-<td align="right">1998</td>
-<td align="right">26015521</td>
-<td align="right">5.614</td>
-<td align="right">57.73000</td>
-<td align="right">110.1</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
-<td align="right">957.4293</td>
-<td align="right">30.70321</td>
-<td align="right">NA</td>
-<td align="right">11000</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
-<td align="right">4697.427</td>
-<td align="right">519528.30</td>
-<td align="right">0.18056</td>
 <td align="right">NA</td>
-<td align="right">4891</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="left">NPL</td>
+<td align="left">Nepal</td>
+<td align="left">NP</td>
+<td align="left">Asia</td>
+<td align="left">Southern Asia</td>
+<td align="left">NA</td>
+<td align="right">1974</td>
+<td align="right">13131260</td>
+<td align="right">5.853</td>
+<td align="right">43.15100</td>
+<td align="right">242.8</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">281.9850</td>
+<td align="right">NA</td>
+<td align="right">39940.0</td>
+<td align="right">1240</td>
+<td align="right">3755148</td>
+<td align="right">5.82385</td>
+<td align="right">425.372</td>
+<td align="right">21302.398</td>
+<td align="right">0.03239</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
 </tr>
 <tr class="odd">
-<td align="left">MNE</td>
-<td align="left">Montenegro</td>
-<td align="left">ME</td>
+<td align="left">SMR</td>
+<td align="left">San Marino</td>
+<td align="left">SM</td>
 <td align="left">Europe</td>
 <td align="left">Southern Europe</td>
 <td align="left">NA</td>
 <td align="right">1973</td>
-<td align="right">530220</td>
-<td align="right">2.567</td>
-<td align="right">71.39200</td>
+<td align="right">19566</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
@@ -612,6 +502,8 @@ gapminder &lt;- read_delim(&quot;gapminder.csv.bz2&quot;)</code></pre>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">10.0</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
@@ -622,83 +514,191 @@ gapminder &lt;- read_delim(&quot;gapminder.csv.bz2&quot;)</code></pre>
 <td align="right">NA</td>
 </tr>
 <tr class="even">
-<td align="left">DZA</td>
-<td align="left">Algeria</td>
-<td align="left">DZ</td>
-<td align="left">Africa</td>
-<td align="left">Northern Africa</td>
+<td align="left">HKG</td>
+<td align="left">Hong Kong</td>
+<td align="left">HK</td>
+<td align="left">Asia</td>
+<td align="left">Eastern Asia</td>
 <td align="left">NA</td>
-<td align="right">1991</td>
-<td align="right">26400479</td>
-<td align="right">4.479</td>
-<td align="right">67.27000</td>
-<td align="right">48.1</td>
+<td align="right">1965</td>
+<td align="right">3597900</td>
+<td align="right">4.422</td>
+<td align="right">69.54288</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
-<td align="right">3442.5367</td>
 <td align="right">NA</td>
-<td align="right">386220.00</td>
-<td align="right">98157</td>
-<td align="right">3809857</td>
-<td align="right">12.60331</td>
-<td align="right">79049.519</td>
-<td align="right">111649.00</td>
-<td align="right">2.99425</td>
+<td align="right">4904.7784</td>
 <td align="right">NA</td>
-<td align="right">34</td>
+<td align="right">130.0</td>
+<td align="right">NA</td>
+<td align="right">20800</td>
+<td align="right">NA</td>
+<td align="right">4807.437</td>
+<td align="right">NA</td>
+<td align="right">1.33618</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
 </tr>
 <tr class="odd">
-<td align="left">CAN</td>
-<td align="left">Canada</td>
-<td align="left">CA</td>
-<td align="left">Americas</td>
-<td align="left">Northern America</td>
+<td align="left">AND</td>
+<td align="left">Andorra</td>
+<td align="left">AD</td>
+<td align="left">Europe</td>
+<td align="left">Southern Europe</td>
 <td align="left">NA</td>
-<td align="right">1982</td>
-<td align="right">25116942</td>
-<td align="right">1.690</td>
-<td align="right">75.76341</td>
-<td align="right">11.2</td>
+<td align="right">1962</td>
+<td align="right">15370</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
-<td align="right">31130.2340</td>
 <td align="right">NA</td>
-<td align="right">612120.00</td>
-<td align="right">672000</td>
-<td align="right">53333208</td>
-<td align="right">50.60572</td>
-<td align="right">414811.040</td>
-<td align="right">576432.38</td>
-<td align="right">16.51519</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">260.0</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 </tr>
 <tr class="even">
-<td align="left">NZL</td>
-<td align="left">New Zealand</td>
-<td align="left">NZ</td>
-<td align="left">Oceania</td>
-<td align="left">Australia and New Zealand</td>
+<td align="left">SYR</td>
+<td align="left">Syrian Arab Republic</td>
+<td align="left">SY</td>
+<td align="left">Asia</td>
+<td align="left">Western Asia</td>
 <td align="left">NA</td>
-<td align="right">1999</td>
-<td align="right">3835100</td>
-<td align="right">1.970</td>
-<td align="right">77.89024</td>
-<td align="right">7.6</td>
+<td align="right">1995</td>
+<td align="right">14345492</td>
+<td align="right">4.501</td>
+<td align="right">71.96100</td>
+<td align="right">29.1</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
-<td align="right">28693.9200</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">137890.0</td>
+<td align="right">86141</td>
+<td align="right">6094151</td>
+<td align="right">71.23213</td>
+<td align="right">41664.454</td>
+<td align="right">60581.463</td>
+<td align="right">2.90436</td>
+<td align="right">84.39232</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">NCL</td>
+<td align="left">New Caledonia</td>
+<td align="left">NC</td>
+<td align="left">Oceania</td>
+<td align="left">Melanesia</td>
+<td align="left">NA</td>
+<td align="right">2016</td>
+<td align="right">276550</td>
+<td align="right">2.080</td>
+<td align="right">76.93171</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
 <td align="right">100.00000</td>
-<td align="right">149030.00</td>
+<td align="right">1840.3</td>
 <td align="right">NA</td>
-<td align="right">872700</td>
-<td align="right">460.45016</td>
-<td align="right">32639.967</td>
-<td align="right">71814.67</td>
-<td align="right">8.51085</td>
+<td align="right">8817</td>
+<td align="right">248.91122</td>
+<td align="right">5328.151</td>
+<td align="right">NA</td>
+<td align="right">19.26650</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="left">JAM</td>
+<td align="left">Jamaica</td>
+<td align="left">JM</td>
+<td align="left">Americas</td>
+<td align="left">Latin America and the Caribbean</td>
+<td align="left">Caribbean</td>
+<td align="right">1976</td>
+<td align="right">2055365</td>
+<td align="right">4.286</td>
+<td align="right">69.71800</td>
+<td align="right">46.0</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">4266.4121</td>
+<td align="right">NA</td>
+<td align="right">5070.0</td>
+<td align="right">NA</td>
+<td align="right">13077</td>
+<td align="right">98.62069</td>
+<td align="right">7282.662</td>
+<td align="right">7832.739</td>
+<td align="right">3.54325</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">MWI</td>
+<td align="left">Malawi</td>
+<td align="left">MW</td>
+<td align="left">Africa</td>
+<td align="left">Sub-Saharan Africa</td>
+<td align="left">Eastern Africa</td>
+<td align="right">1995</td>
+<td align="right">9844415</td>
+<td align="right">6.309</td>
+<td align="right">45.84600</td>
+<td align="right">206.3</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">367.0016</td>
+<td align="right">2.26803</td>
+<td align="right">42800.0</td>
+<td align="right">NA</td>
+<td align="right">1773119</td>
+<td align="right">18.92130</td>
+<td align="right">920.417</td>
+<td align="right">8132.454</td>
+<td align="right">0.09350</td>
+<td align="right">0.00000</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="left">PLW</td>
+<td align="left">Palau</td>
+<td align="left">PW</td>
+<td align="left">Oceania</td>
+<td align="left">Micronesia</td>
+<td align="left">NA</td>
+<td align="right">1998</td>
+<td align="right">18410</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">30.1</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">43.0</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">198.018</td>
+<td align="right">NA</td>
+<td align="right">10.75600</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 </tr>
@@ -775,32 +775,14 @@ two of these entitites are CHANISL and NLD CURACAO.</li>
 </ol>
 <pre class="r"><code>gapminder %&gt;%
   group_by(name) %&gt;%
+  select(iso3, name) %&gt;%
   summarize(name_count = n_distinct(iso3)) %&gt;%
-  arrange(desc(name_count))</code></pre>
-<pre><code>## # A tibble: 250 × 2
-##    name                name_count
-##    &lt;chr&gt;                    &lt;int&gt;
-##  1 &lt;NA&gt;                         4
-##  2 Afghanistan                  1
-##  3 Albania                      1
-##  4 Algeria                      1
-##  5 American Samoa               1
-##  6 Andorra                      1
-##  7 Angola                       1
-##  8 Anguilla                     1
-##  9 Antarctica                   1
-## 10 Antigua and Barbuda          1
-## # … with 240 more rows</code></pre>
-<pre class="r"><code>gapminder %&gt;%
-  filter(is.na(name)) %&gt;%
-  distinct(iso3)</code></pre>
-<pre><code>## # A tibble: 4 × 1
-##   iso3       
-##   &lt;chr&gt;      
-## 1 CHANISL    
-## 2 GBM        
-## 3 KOS        
-## 4 NLD_CURACAO</code></pre>
+  filter(name_count &gt; 1)</code></pre>
+<pre><code>## # A tibble: 1 × 2
+##   name  name_count
+##   &lt;chr&gt;      &lt;int&gt;
+## 1 &lt;NA&gt;           4</code></pre>
+<p>There are 4 country names that have more than one iso-3 code.</p>
 <ol start="3" style="list-style-type: decimal">
 <li>(2pt) What is the minimum and maximum year in these data?</li>
 </ol>
@@ -1063,6 +1045,8 @@ cat(&quot;Ranking of US in 1960:&quot;, us_rank_1960, &quot;\n&quot;)</code></pr
 <pre><code>## Ranking of US in 1960:</code></pre>
 <pre class="r"><code>cat(&quot;Ranking of US in 2019:&quot;, us_rank_2019, &quot;\n&quot;)</code></pre>
 <pre><code>## Ranking of US in 2019:</code></pre>
+<p>Comment: I couldn’t get this one to function correctly :( Dont know
+why it won’t print the ranking.</p>
 <ol start="8" style="list-style-type: decimal">
 <li>(6pt) If you did this correctly, then you noticed that US ranking
 has been falling quite a bit. But we also have more countries in
@@ -1105,6 +1089,8 @@ cat(&quot;Relative rank of the US in terms of life expectancy in 1960:&quot;,
 <pre class="r"><code>cat(&quot;Relative rank of the US in terms of life expectancy in 2019:&quot;,
     round(rank_2019, 2), &quot;\n&quot;)</code></pre>
 <pre><code>## Relative rank of the US in terms of life expectancy in 2019:</code></pre>
+<p>Comment: I couldn’t get this one to function correctly :( Dont know
+why it won’t print the ranking.</p>
 
 
 
