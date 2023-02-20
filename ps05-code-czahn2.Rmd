@@ -307,3 +307,5 @@ cat("Relative rank of the US in terms of life expectancy in 2019:",
 
 ```
 Comment: I couldn't get this one to function correctly :( Dont know why it won't print the ranking.
+
+I spent 10 hours on this PS.
